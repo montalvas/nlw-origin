@@ -1,2 +1,2 @@
 # nlw-origin
-Front-end course at rocketseat
+## Front-end course at rocketseat
