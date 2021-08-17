@@ -1,3 +1,85 @@
-body {
-    background: #D1AA8B;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&family=Dancing+Script:wght@700&display=swap');
+
+/* variables */
+
+:root {
+    --cor-destaque: #d1aa8b;
+    --fonte-pricipal: 'DM Sans', sans-serif;
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-logo: 'Dancing Script', cursive;
+    --base-color: #FFA724;
+    --base-color-second: #FCD397;
+    --base-color-alt: #F6D167;
+    --title-color: #2f210e;
+    --text-color: #757575;
+    --text-color-light: #fafafa;
+    --body-color: #fafafa;
 }
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* base */
+
+body {
+    font: 400 1rem var(--fonte-pricipal);
+    background-color: var(--body-color);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+    font: 700 1.875rem var(--fonte-titulo);
+    color: var(--title-color);
+    -webkit-font-smoothing: auto;
+}
+
+/* header */
+
+#header {
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.container {
+    width: 100%;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+nav {
+    height: 4.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font: 700 2rem var(--fonte-logo);
+    color: var(--title-color);
+}
+
+.logo span {
+    color: var(--base-color);
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+/* home */
