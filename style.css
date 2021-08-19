@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&family=Dancing+Script:wght@700&display=swap');
 
-/* variables */
+/*================ variables ================*/
 
 :root {
     --cor-destaque: #d1aa8b;
@@ -16,7 +16,7 @@
     --body-color: #fafafa;
 }
 
-/* reset */
+/*================ reset ================*/
 
 * {
     margin: 0;
@@ -35,7 +35,7 @@ img {
     height: auto;
 }
 
-/* base */
+/*================ base ================*/
 
 body {
     font: 400 1rem var(--fonte-pricipal);
@@ -62,6 +62,11 @@ h1 {
     margin-right: 1.5rem;
 }
 
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
 nav {
     height: 4.5rem;
     display: flex;
@@ -82,4 +87,20 @@ nav {
     padding: 5rem 0;
 }
 
-/* home */
+/*================ home ================*/
+
+#home .container {
+    margin: 0;
+}
+
+#home .image img {
+    position: relative;
+    right: 2.93rem;
+}
+
+#home .image::before
+
+#home .text {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
