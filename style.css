@@ -1,21 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&family=Dancing+Script:wght@700&display=swap');
 
-/*================ variables ================*/
-
-:root {
-    --cor-destaque: #d1aa8b;
-    --fonte-pricipal: 'DM Sans', sans-serif;
-    --fonte-titulo: 'Poppins', sans-serif;
-    --fonte-logo: 'Dancing Script', cursive;
-    --base-color: #FFA724;
-    --base-color-second: #FCD397;
-    --base-color-alt: #F6D167;
-    --title-color: #2f210e;
-    --text-color: #757575;
-    --text-color-light: #fafafa;
-    --body-color: #fafafa;
-}
-
 /*================ reset ================*/
 
 * {
@@ -35,6 +19,25 @@ img {
     height: auto;
 }
 
+/*================ variables ================*/
+
+:root {
+    --header-height: 4.5rem;
+    /* fonts */
+    --fonte-pricipal: 'DM Sans', sans-serif;
+    --fonte-titulo: 'Poppins', sans-serif;
+    --fonte-logo: 'Dancing Script', cursive;
+    /* colors */
+    --base-color: #FFA724;
+    --base-color-second: #FCD397;
+    --base-color-alt: #fcb448;
+    --title-color: #2f210e;
+    --text-color: #757575;
+    --text-color-light: #fafafa;
+    --body-color: #fafafa;
+}
+
+
 /*================ base ================*/
 
 body {
@@ -44,16 +47,8 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-    font: 700 1.875rem var(--fonte-titulo);
-    color: var(--title-color);
-    -webkit-font-smoothing: auto;
-}
-
-/* header */
-
-#header {
-    border-bottom: 1px solid #e4e4e4;
+main {
+    margin-top: var(--header-height);
 }
 
 .container {
@@ -62,13 +57,34 @@ h1 {
     margin-right: 1.5rem;
 }
 
-.grid {
-    display: grid;
-    gap: 2rem;
+.divider-1 {
+    height: 1px;
+    background: linear-gradient(270deg, #fcb448 0%, rgba(244, 235, 204, 0.34) 100%);
+}
+
+h1 {
+    font: 700 1.875rem var(--fonte-titulo);
+    color: var(--title-color);
+    -webkit-font-smoothing: auto;
+}
+
+/*================ header ================*/
+
+#header {
+    border-bottom: 1px solid #e4e4e4;
+    margin-bottom: 2rem;
+    display: flex;
+
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: var(--body-color);
 }
 
 nav {
-    height: 4.5rem;
+    height: var(--header-height);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,14 +99,30 @@ nav {
     color: var(--base-color);
 }
 
+/*================ layout ================*/
+
+
 .section {
     padding: 5rem 0;
 }
 
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
 /*================ home ================*/
+
+#home {
+    overflow: hidden;
+}
 
 #home .container {
     margin: 0;
+}
+
+#home .image {
+    position: relative;
 }
 
 #home .image img {
@@ -98,9 +130,49 @@ nav {
     right: 2.93rem;
 }
 
-#home .image::before
+#home .image::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    background-color: var(--base-color-second);
+    position: absolute;
+    top: -16.8%;
+    left: 16.7%;
+    z-index: 0;
+}
+
+#home .image img, #home .image::before {
+    border-radius: 0.25rem;
+}
 
 #home .text {
     margin-left: 1.5rem;
     margin-right: 1.5rem;
+    text-align: center;
 }
+
+#home .text h1 {
+    margin-bottom: 1rem;
+}
+
+#home .text p {
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+.button {
+    background-color: var(--base-color);
+    color: var(--text-color-light);
+    height: 3.5rem;
+    padding: 0 2rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.25rem;
+    font: 500 1rem var(--fonte-pricipal);
+}
+
+.button:hover {
+    background-color: var(--base-color-alt);
+    transition: background .3s;
+}
+
