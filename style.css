@@ -28,13 +28,15 @@ img {
     --fonte-titulo: 'Poppins', sans-serif;
     --fonte-logo: 'Dancing Script', cursive;
     /* colors */
-    --base-color: #FFA724;
-    --base-color-second: #FCD397;
-    --base-color-alt: #fcb448;
-    --title-color: #2f210e;
-    --text-color: #757575;
-    --text-color-light: #fafafa;
-    --body-color: #fafafa;
+    --hue: 9;
+    /* HSL color mode */
+    --base-color: hsl(var(--hue) 50% 57%);
+    --base-color-second: hsl(var(--hue) 65% 88%);
+    --base-color-alt: hsl(var(--hue) 57% 53%);
+    --title-color: hsl(var(--hue) 41% 10%);
+    --text-color: hsl(0 0% 46%);
+    --text-color-light: hsl(0 0% 98%);
+    --body-color: hsl(0 0% 98%);
 }
 
 
@@ -47,10 +49,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-main {
-    margin-top: var(--header-height);
-}
-
 .container {
     width: 100%;
     margin-left: 1.5rem;
@@ -59,13 +57,33 @@ main {
 
 .divider-1 {
     height: 1px;
-    background: linear-gradient(270deg, #fcb448 0%, rgba(244, 235, 204, 0.34) 100%);
+    background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1),
+    hsla(var(--hue), 65%, 88%, 0.34)
+    );
 }
 
 h1 {
     font: 700 1.875rem var(--fonte-titulo);
     color: var(--title-color);
     -webkit-font-smoothing: auto;
+}
+
+.button {
+    background-color: var(--base-color);
+    color: var(--text-color-light);
+    height: 3.5rem;
+    padding: 0 2rem;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 0.25rem;
+    font: 500 1rem var(--fonte-pricipal);
+}
+
+.button:hover {
+    background-color: var(--base-color-alt);
+    transition: background .3s;
 }
 
 /*================ header ================*/
@@ -101,6 +119,10 @@ nav {
 
 /*================ layout ================*/
 
+
+main {
+    margin-top: var(--header-height);
+}
 
 .section {
     padding: 5rem 0;
@@ -160,19 +182,4 @@ nav {
     max-width: 100%;
 }
 
-.button {
-    background-color: var(--base-color);
-    color: var(--text-color-light);
-    height: 3.5rem;
-    padding: 0 2rem;
-    display: inline-flex;
-    align-items: center;
-    border-radius: 0.25rem;
-    font: 500 1rem var(--fonte-pricipal);
-}
-
-.button:hover {
-    background-color: var(--base-color-alt);
-    transition: background .3s;
-}
 
