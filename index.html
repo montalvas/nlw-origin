@@ -5,24 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OriginSix</title>
+    <!-- fonts -->
+    <link rel="stylesheet" href="assets/fonts/style.css">
+    <!-- styles -->
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <!-- header -->
-    <header id="header">
+    <header id="header" class="scroll">
       <nav class="container">
         <a class="logo" href="#">PãoD'<span>Que</span></a>
         <!-- menu -->
         <div class="menu">
-          <ul>
-            <li><a href="#home">Início</a></li>
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#services">Serviços</a></li>
-            <li><a href="#testimonials">Depoimentos</a></li>
-            <li><a href="#contact">Contato</a></li>
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+            <li><a class="title" href="#contact">Contato</a></li>
           </ul>
         </div>
         <!-- end menu -->
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
       </nav>
     </header>
     <!-- header end -->
@@ -35,8 +40,8 @@
             <img src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YmFrZXJ5fGVufDB8fDB8fA==&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60">
           </div>
           <div class="text">
-            <h1>Fofinho de um jeito saboroso</h1>
-            <p>Uma bread maker brasileira, prontinha para atender todos os seus gostos.</p>
+            <h1 class="title">Fofinho de um jeito saboroso</h1>
+            <p>Uma padaria e confeitaria preparada para atender todos os seus gostos com uma variedade incrível de sabores.</p>
             <a class="button" href="#">Faça seu pedido</a>
           </div>
         </div>
@@ -46,17 +51,53 @@
 
       <section class="section" id="about">
         <div class="container grid">
-          Sobre
+          <div class="image">
+            <img src="https://st.depositphotos.com/1518767/3344/i/950/depositphotos_33440625-stock-photo-three-young-bakers-standing-in.jpg" alt="mulher preparando bolo">
+          </div>
+          <div class="text">
+            <h2 class="title">Sobre nós</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat quas, debitis culpa, sint corrupti recusandae, quo ipsa eos deleniti accusantium ea? Magni dolorem facere sed beatae iusto recusandae, blanditiis temporibus.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia accusantium unde iure distinctio? Deleniti distinctio labore ipsam praesentium nesciunt perspiciatis earum eligendi reiciendis cum suscipit! Nesciunt repellendus aspernatur maiores! Voluptatibus?</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, iusto perspiciatis ipsum mollitia neque doloribus ipsa molestias perferendis facere possimus distinctio harum temporibus nihil! Fugiat, natus quos! Magnam, repudiandae aliquam.</p>
+          </div>
         </div>
       </section>
 
+      <div class="divider-2"></div>
+
       <section class="section" id="services">
         <div class="container grid">
-          Services
-        </div>
+          <header>
+            <h2 class="title">Serviços</h2>
+            <p class="subtitle">A <strong>PãoD'Que</strong> serve os mais variados tipos de pães, tortas doces, massa flora, bolos estilizados, biscoitos doces e salgados para o seu Coffee Break, seja para eventos empresarias, reuniões e confraternizações ou apenas degustação pessoal.</p>
+          </header>
+          <div class="cards grid">
+            <div class="card">
+              <i class="icon-baguette"></i>
+              <h3 class="title">Pães</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A fuga itaque molestias iure ipsum, eos qui quia explicabo ducimus vero unde, nesciunt exercitationem molestiae omnis quidem! Quae voluptatem temporibus recusandae.</p>
+            </div>
+
+            <div class="card">
+              <i class="icon-cake"></i>
+              <h3 class="title">Bolos</h3>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, eius corrupti minus eos eveniet illo possimus nobis facilis eligendi. Fugiat veritatis explicabo maxime autem placeat vitae, optio quod repudiandae voluptatum.</p>
+            </div>
+
+            <div class="card">
+              <i class="icon-cookie"></i>
+              <h3 class="title">Biscoitos</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit blanditiis expedita quaerat iure, maxime atque consequuntur quasi quae beatae. Alias animi aliquid explicabo sint eum quos et sapiente quasi nisi.</p>
+            </div>
+          </div><!--cards-->
+        </div><!--container grid-->
       </section>
     </main>
     <!-- main end-->
+
+    <script src="main.js"></script>
 
     <footer></footer>
   </body>
