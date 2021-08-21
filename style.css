@@ -15,7 +15,6 @@ a {
 
 img {
     width: 100%;
-    max-width: 500px;
     height: auto;
 }
 
@@ -30,7 +29,7 @@ img {
     /* colors */
     --hue: 9;
     /* HSL color mode */
-    --base-color: hsl(var(--hue) 50% 57%);
+    --base-color: hsl(var(--hue) 50% 52%);
     --base-color-second: hsl(var(--hue) 65% 88%);
     --base-color-alt: hsl(var(--hue) 57% 53%);
     --title-color: hsl(var(--hue) 41% 10%);
@@ -101,12 +100,7 @@ h1 {
     background: var(--body-color);
 }
 
-nav {
-    height: var(--header-height);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+/*================ logo ================*/
 
 .logo {
     font: 700 2rem var(--fonte-logo);
@@ -117,11 +111,21 @@ nav {
     color: var(--base-color);
 }
 
+/*================ navigation ================*/
+
+nav {
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
 /*================ layout ================*/
 
 
 main {
-    margin-top: var(--header-height);
+    margin-top: calc(var(--header-height) + 2rem);
 }
 
 .section {
