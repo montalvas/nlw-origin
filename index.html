@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>OriginSix</title>
+
     <!-- fonts -->
     <link rel="stylesheet" href="assets/fonts/style.css">
+
+    <!--swiperjs-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
     <!-- styles -->
     <link rel="stylesheet" href="style.css">
   </head>
@@ -35,7 +40,7 @@
     <!-- main -->
     <main>
       <!-- home -->
-      <section id="home" class="section">
+      <section class="section" id="home">
         <div class="container grid">
           <div class="image">
             <img src="assets/images/Bakery/bakery-m.jpg" alt="balcão com pães de variados tipos">
@@ -105,11 +110,14 @@
 
       <!--testimonials-->
       <section class="section" id="testimonials">
-        <div class="container grid">
+        <div class="container">
           <header>
             <h2 class="title">Depoimentos de nossos clientes</h2>
-            <div class="testimonials">
-              <div class="testimonial">
+          </header>
+          <div class="testimonials swiper-container">
+            <div class="swiper-wrapper">
+
+              <div class="testimonial swiper-slide">
                 <blockquote>
                   <p>
                     <span>&ldquo;</span>
@@ -119,10 +127,9 @@
                     <img src="assets/images/Marisa/Marisa-circle.png" alt="foto de Marisa Rivolli">
                     Marisa Rivolli
                   </cite>
-                </blockquote>  
+                </blockquote>
               </div><!-- testimonial 1 -->
-
-              <div class="testimonial">
+              <div class="testimonial swiper-slide">
                 <blockquote>
                   <p>
                     <span>&ldquo;</span>
@@ -132,10 +139,9 @@
                     <img src="assets/images/Luna/Luna-circle.png" alt="foto de Luna Montalvani">
                     Luna Montalvani
                   </cite>
-                </blockquote>  
+                </blockquote>
               </div><!-- testimonial 1 -->
-
-              <div class="testimonial">
+              <div class="testimonial swiper-slide">
                 <blockquote>
                   <p>
                     <span>&ldquo;</span>
@@ -145,18 +151,47 @@
                     <img src="assets/images/Robert/Robert-circle.png" alt="foto de Robert Fonseca">
                     Robert Fonseca
                   </cite>
-                </blockquote>  
+                </blockquote>
               </div><!-- testimonial 1 -->
-            </div><!-- testimonials -->
-          </header>
+
+            </div><!--swiper-wrapper-->
+
+            <div class="swiper-pagination"></div>
+            <!--pagination-->
+          </div><!-- testimonials -->
         </div>
       </section>
       <!--testimonials end-->
+
+      <div class="divider-2"></div>
+
+      <!-- contact -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Entre em contato conosco!</h2>
+            <p>Entre em contato com a <strong>PãoDQue</strong>, queremos tirar suas dúvidas, ouvir suas críticas e sugestões.</p>
+            <a href="https://api.whatsapp.com/send?phone=+PaoDQue&text=+Manda um oi! A gente responda já já." class="button" target="_blank"><i class="icon-whatsapp"></i> Manda um oi</a>
+          </header>
+          
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> 79 99999-9999</li>
+              <li><i class="icon-map-pin"></i> R. Exemplo, 999</li>
+              <li><i class="icon-mail"></i> contato@paodque.com</li>
+            </ul>
+          </div>
+      </section>
+      <!-- contact end -->
     </main>
     <!-- main end-->
 
+    <!--swiper-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!--scroll reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--main-->
     <script src="main.js"></script>
-
     <footer></footer>
   </body>
 </html>
