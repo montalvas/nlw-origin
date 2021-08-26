@@ -460,10 +460,6 @@ nav.show .icon-close {
     padding: 4rem 1.5rem;
 }
 
-.swiper-pagination {
-    position: relative;
-}
-
 .swiper-pagination-bullet {
     width: 0.75rem;
     height: 0.75rem;
@@ -540,5 +536,5 @@ nav.show .icon-close {
 
 #footer .social i {
     font-size: 1.5rem;
-    color: var(--body-color);
+    color: var(--text-color-light);
 }

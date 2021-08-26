@@ -23,7 +23,7 @@ for(const link of links) {
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
-function changeHeaderWhenScroll() {
+document.addEventListener('scroll', function() {
     if (window.scrollY >= navHeight) {
       // scroll é maior que a altura do header
       header.classList.add('scroll')
@@ -31,14 +31,14 @@ function changeHeaderWhenScroll() {
       // menor que a altura do header
       header.classList.remove('scroll')
     }
-  }
+  })
 
-// Carousel
+// Testimonial Carousel
 
 const swiper = new Swiper('.swiper-container', {
     slidesPerView: 1, //Quantos slides serão visualizados
     pagination: {
-        el: '.swiper-pagination' //Paginação
+        el: '.swiper-pagination' //Controlador de paginação
     },
     mousewheel: true, //Mudar o elemento com scroll do mouse
     keyboard: true //Mudar com as setas do teclado
