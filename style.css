@@ -407,6 +407,7 @@ nav.show .icon-close {
 
 #testimonials {
     background: white;
+    overflow-x: hidden;
 }
 
 #testimonials .container {
@@ -458,6 +459,10 @@ nav.show .icon-close {
 .swiper-slide {
     height: auto;
     padding: 4rem 1.5rem;
+}
+
+.swiper-pagination {
+    position: relative;
 }
 
 .swiper-pagination-bullet {
