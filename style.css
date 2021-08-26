@@ -176,6 +176,10 @@ main {
     transition: color 0.2s;
 }
 
+.logo-alt span {
+    color: var(--body-color);
+}
+
 /*================ navigation ================*/
 
 nav {
@@ -513,4 +517,28 @@ nav.show .icon-close {
 
 #footer {
     background: var(--base-color);
+}
+
+#footer .grid {
+    justify-content: center;
+}
+
+#footer .brand p {
+    color: var(--text-color-light);
+    margin-bottom: 0.75rem;
+}
+
+#footer .logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+#footer .social {
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .social i {
+    font-size: 1.5rem;
+    color: var(--body-color);
 }
