@@ -23,15 +23,15 @@ for(const link of links) {
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
-window.addEventListener('scroll', function() {
+function changeHeaderWhenScroll() {
     if (window.scrollY >= navHeight) {
-        //scroll maior que altura do header
-        header.classList.add('scroll')
+      // scroll é maior que a altura do header
+      header.classList.add('scroll')
     } else {
-        //scroll menor que altura do header
-        header.classList.remove('scroll')
+      // menor que a altura do header
+      header.classList.remove('scroll')
     }
-})
+  }
 
 // Carousel
 
@@ -57,6 +57,6 @@ const swiper = new Swiper('.swiper-container', {
   #about .image, #about .text,
   #services header, #services .card,
   #testimonials header, #testimonials .testimonials
-  #contact header, #contact .links,
+  #contact .text, #contact .links,
   footer .brand, footer .social
   `, { interval: 100 })

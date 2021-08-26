@@ -399,7 +399,7 @@ nav.show .icon-close {
     margin-bottom: 0.75rem;
 }
 
-/*================ base ================*/
+/*================ testimonials ================*/
 
 #testimonials {
     background: white;
@@ -456,6 +456,10 @@ nav.show .icon-close {
     padding: 4rem 1.5rem;
 }
 
+.swiper-pagination {
+    position: relative;
+}
+
 .swiper-pagination-bullet {
     width: 0.75rem;
     height: 0.75rem;
@@ -469,15 +473,19 @@ nav.show .icon-close {
 
 /*================ contact ================*/
 
-#contact grid {
+#contact .grid {
     gap: 4rem;
 }
 
-#contact header {
+#contact .text {
     text-align: center;
 }
 
-#contact header p {
+#contact .text strong {
+    color: var(--base-color);
+}
+
+#contact .text p {
     margin-bottom: 2rem;
 }
 
@@ -499,4 +507,10 @@ nav.show .icon-close {
 
 #contact ul li i {
     color: var(--base-color);
+}
+
+/*================ contact ================*/
+
+#footer {
+    background: var(--base-color);
 }
