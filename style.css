@@ -25,10 +25,15 @@ img {
 
 :root {
     --header-height: 4.5rem;
+
     /* fonts */
     --fonte-pricipal: 'DM Sans', sans-serif;
     --fonte-titulo: 'Poppins', sans-serif;
     --fonte-logo: 'Dancing Script', cursive;
+
+    --title-font-size: 1.875rem;
+    --subtitle-font-size: 1rem;
+
     /* colors */
     --hue: 9;
     /* HSL color mode */
@@ -49,7 +54,7 @@ html {
 }
 
 body {
-    font: 400 1rem var(--fonte-pricipal);
+    font: 400 var(--subtitle-font-size) var(--fonte-pricipal);
     background-color: var(--body-color);
     color: var(--text-color);
     -webkit-font-smoothing: antialiased;
@@ -57,7 +62,7 @@ body {
 
 
 .title {
-    font: 700 1.875rem var(--fonte-titulo);
+    font: 700 var(--title-font-size) var(--fonte-titulo);
     color: var(--title-color);
     -webkit-font-smoothing: auto;
 }
@@ -514,7 +519,7 @@ nav.show .icon-close {
     color: var(--base-color);
 }
 
-/*================ contact ================*/
+/*================ footer ================*/
 
 #footer {
     background: var(--base-color);
@@ -542,4 +547,56 @@ nav.show .icon-close {
 #footer .social i {
     font-size: 1.5rem;
     color: var(--text-color-light);
+}
+
+#footer .social a {
+    transition: 0.3s;
+    display: inline-block;
+}
+
+#footer .social a:hover {
+    transform: translateY(-7px);
+}
+
+/*================ back to top ================*/
+
+.back-to-top {
+    background: var(--base-color);
+    color: var(--text-color-light);
+
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    clip-path: circle();
+
+    padding: 0.5rem;
+    line-height: 0;
+    font-size: 1.5rem;
+
+    z-index: 11;
+
+    visibility: 0;
+    opacity: 0;
+
+    transition: 0.3s;
+    transform: translateY(100%); 
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    /* Cria com o translate o efeito do ícone aparecer subitamente */
+}
+
+/*================ Responsive ================*/
+/* extra large devices: 1200 > */
+/* large devices: 992 */
+/* medium devices: 767 */
+/* small devices: 576 */
+
+@media (min-width: 992px) {
+    :root {
+        font-size: 20px;
+    }
 }

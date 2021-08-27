@@ -20,18 +20,20 @@ for(const link of links) {
 
 /* Criar sombra no header quando mover o scroll */
 
-const header = document.querySelector('#header')
-const navHeight = header.offsetHeight
 
-document.addEventListener('scroll', function() {
-    if (window.scrollY >= navHeight) {
-      // scroll é maior que a altura do header
-      header.classList.add('scroll')
-    } else {
-      // menor que a altura do header
-      header.classList.remove('scroll')
-    }
-  })
+function changeHeaderWhenScroll() {
+  const header = document.querySelector('#header')
+  const navHeight = header.offsetHeight
+
+  if (window.scrollY >= navHeight) {
+    // scroll é maior que a altura do header
+    header.classList.add('scroll')
+  } else {
+    // menor que a altura do header
+    header.classList.remove('scroll')
+  }
+}
+    
 
 // Testimonial Carousel
 
@@ -40,7 +42,7 @@ const swiper = new Swiper('.swiper-container', {
     pagination: {
         el: '.swiper-pagination' //Controlador de paginação
     },
-    mousewheel: true, //Mudar o elemento com scroll do mouse
+    //mousewheel: true, //Mudar o elemento com scroll do mouse
     keyboard: true //Mudar com as setas do teclado
   });
 
@@ -60,3 +62,22 @@ const swiper = new Swiper('.swiper-container', {
   #contact .text, #contact .links,
   footer .brand, footer .social
   `, { interval: 100 })
+
+// back to top button
+
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top')
+
+  if(window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
+/* When Scroll */
+
+window.addEventListener('scroll', function() {
+  changeHeaderWhenScroll()
+  backToTop()
+})
