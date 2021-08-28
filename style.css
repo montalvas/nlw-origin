@@ -610,6 +610,14 @@ nav.show .icon-close {
         padding: 10rem 0;
     }
 
+    .section header,
+    #testimonials header {
+        max-width: 32rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .button {
         height: 3.125rem;
     }
@@ -659,6 +667,73 @@ nav.show .icon-close {
         grid-auto-flow: column;
         margin: 0 auto;
     }
+
+    /*================ services ================*/
+    
+    #services .cards {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #services .card {
+        max-width: 23rem;
+        max-height: 23rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    
+
+    /*================ testimonials ================*/
+
+    #testimonials .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*================ swiper ================*/
+
+    .swiper-container {
+        overflow-x: hidden;
+    }
+
+    /*================ contact ================*/
+
+    #contact .container {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    #contact .grid {
+        gap: 0;
+    }
+
+    #contact .text {
+        max-width: 25rem;
+    }
+
+    /*================ footer ================*/
+
+    #footer.section {
+        padding: 3.75rem 0;
+    }
+
+    #footer .container {
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #footer .social {
+        max-width: 10rem;
+        gap: 2.5rem;
+    }
+
+    #footer .logo {
+        font-size: 2.5rem;
+    }
+
+
+
 }
 
 /* large devices: 992 */

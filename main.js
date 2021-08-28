@@ -43,7 +43,13 @@ const swiper = new Swiper('.swiper-container', {
         el: '.swiper-pagination' //Controlador de paginação
     },
     //mousewheel: true, //Mudar o elemento com scroll do mouse
-    keyboard: true //Mudar com as setas do teclado
+    keyboard: true, //Mudar com as setas do teclado
+    breakpoints: {
+      767: {
+        slidesPerView: 2,
+        setWrapperSize: true
+      }
+    }
   });
 
   //ScrollReveal: Mostra os elementos quando der scroll na página
