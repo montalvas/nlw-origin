@@ -199,7 +199,8 @@ nav ul li a {
     position: relative;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
     color: var(--base-color);
 }
 
@@ -216,7 +217,8 @@ nav ul li a::after {
     transition: width .3s;
 }
 
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
     width: 100%;
 }
 
@@ -636,6 +638,12 @@ nav.show .icon-close {
 
     nav .menu ul li a.title {
         font: 400 1rem var(--fonte-titulo);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    nav .menu ul li a.title.active {
+        font-weight: bold;
+        -webkit-font-smoothing: auto;
     }
 
     nav .icon-menu {
@@ -747,6 +755,20 @@ nav.show .icon-close {
 
 /* medium devices: 767 */
 @media (min-width: 767px) {
+
+    /*================ base ================*/
+    .title {
+        text-align: center;
+    }
+
+    /*================ testimonials ================*/
+    #services .cards {
+        justify-content: center;
+    }
+    
+    .card {
+        max-width: 32rem;
+    }
 
 }
 
